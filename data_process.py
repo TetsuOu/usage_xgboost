@@ -5,13 +5,15 @@ from utils import create_feature
 import xgboost as xgb
 import shutil
 
-path = '/data/wangzhe/usage/reagent/raw_data/output'
+# path = '/data/wangzhe/usage/reagent/raw_data/output'
+path = '/data/wangzhe/usage/reactant_50k/raw_data'
 
 seed = 42
 
 dirs = [f'val_r{seed}', f'test_r{seed}', f'train_r{seed}']
 
-save_path = '/data/wangzhe/usage/reagent/xgboost_data'
+# save_path = '/data/wangzhe/usage/reagent/xgboost_data'
+save_path = '/data/wangzhe/usage/reactant_50k/xgboost_data'
 
 for subdir in dirs:
     csvfile = os.path.join(path, f'{subdir}.csv')
@@ -30,5 +32,4 @@ for subdir in dirs:
     
     dmatrix.save_binary(os.path.join(to_path,f'{subdir}.buffer'))
 
-
-    
+print('success')

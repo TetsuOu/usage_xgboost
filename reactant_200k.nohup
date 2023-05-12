@@ -1,3 +1,4 @@
+nohup: 忽略输入
 Skipped loading some Tensorflow models, missing a dependency. No module named 'tensorflow'
 Skipped loading modules with pytorch-geometric dependency, missing a dependency. No module named 'torch_geometric'
 Skipped loading modules with pytorch-geometric dependency, missing a dependency. cannot import name 'DMPNN' from 'deepchem.models.torch_models' (/home/wangzhe/anaconda3/envs/python38/lib/python3.8/site-packages/deepchem/models/torch_models/__init__.py)
@@ -5,6 +6,6 @@ Skipped loading modules with pytorch-lightning dependency, missing a dependency.
 Skipped loading some Jax models, missing a dependency. No module named 'jax'
 训练模型
 保存模型中
- - RSME_std_train: 0.2987, R2_std_train:  0.9089
- - RSME_std_test: 0.4273, R2_std_test:  0.8137
- 训练测试总耗时: 2.0 min
+ - RSME_std_train: 0.0689, R2_std_train:  0.9892
+ - RSME_std_test: 0.2377, R2_std_test:  0.8706
+ 训练测试总耗时: 4.0 min

@@ -1,1 +1,13 @@
-{"max_depth": 15, "learning_rate": 0.02, "min_child_weight": 10, "max_delta_step": 1, "subsample": 0.85, "colsample_bytree": 0.9, "reg_alpha": 0, "reg_lambda": 0.2, "scale_pos_weight": 0.4, "tree_method": "gpu_hist", "gpu_id": 4}
+{
+  "max_depth": 15,
+  "learning_rate": 0.02,
+  "min_child_weight": 10,
+  "max_delta_step": 1,
+  "subsample": 0.85,
+  "colsample_bytree": 0.9,
+  "reg_alpha": 0,
+  "reg_lambda": 0.2,
+  "scale_pos_weight": 0.4,
+  "tree_method": "gpu_hist",
+  "gpu_id": 0
+}

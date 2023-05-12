@@ -4,7 +4,8 @@ import json
 from utils import get_RMSE_r2
 from time import time
 
-data_path = '/data/wangzhe/usage/reagent/xgboost_data'
+# data_path = '/data/wangzhe/usage/reagent/xgboost_data'
+data_path = '/data/wangzhe/usage/reactant_50k/xgboost_data'
 seed = 42
 
 train_data = os.path.join(data_path,f'train_r{seed}',f'train_r{seed}.buffer')
@@ -14,17 +15,17 @@ dtrain = xgb.DMatrix(train_data)
 dval = xgb.DMatrix(val_data)
 
 parameters = {
-                'max_depth': 15,
+                'max_depth': 15,#15
                 'learning_rate': 0.02,
                 'min_child_weight': 10,
                 'max_delta_step': 1,
-                'subsample': 0.85,
+                'subsample': 0.85, #0.85
                 'colsample_bytree': 0.9,
                 'reg_alpha': 0,
                 'reg_lambda': 0.2,
                 'scale_pos_weight': 0.4,
                 'tree_method': 'gpu_hist',
-                'gpu_id': 4
+                'gpu_id': 0
             }
 
 with open('configs/bst_params.json', "w", encoding="utf-8") as f:
@@ -32,7 +33,7 @@ with open('configs/bst_params.json', "w", encoding="utf-8") as f:
 
 start_time = time()
 
-num_rounds = 10000
+num_rounds = 2000
 print("训练模型", flush=True)
 bst = xgb.train(parameters, dtrain, num_rounds)
 print("保存模型中", flush=True)
